@@ -1,6 +1,6 @@
 {
   "name": "scrpts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "List npm scripts from package.json",
   "main": "cli.js",
   "scripts": {
