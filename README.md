@@ -10,7 +10,7 @@ List npm scripts from `package.json`.
 npx scrpts
 ```
 
-Optionally, you can provide an path of package.json as argument:
+Optionally you can provide a property of package.json as argument:
 
 ```
 npx scrpts dependencies # print dependencies
