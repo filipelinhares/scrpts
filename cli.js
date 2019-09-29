@@ -3,14 +3,21 @@ const path = require('path');
 const fs = require('fs').promises;
 const chalk = require('chalk');
 
-const printScripts = file => {
-  const {scripts} = file;
+const pkgPath = process.argv[2];
 
-  const x = Object.keys(scripts).map(f => {
+const printScripts = file => {
+  const pkgInfo = pkgPath ? file[pkgPath] : file.scripts;
+
+  if (!pkgInfo) {
+    console.log('Path not found in package.json');
+    process.exit();
+  }
+
+  const x = Object.keys(pkgInfo).map(f => {
     return (
       `
    ${chalk.bold(f)}
-      ${chalk.dim.italic(scripts[f])}`);
+      ${chalk.dim.italic(pkgInfo[f])}`);
   });
 
   return (
