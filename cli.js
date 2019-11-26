@@ -13,10 +13,10 @@ const printScripts = file => {
 	}
 
 	const x = Object.keys(pkgInfo).map(f => {
-		return `• ${f}: ${pkgInfo[f]}`;
+		return `• ${f}:  ${pkgInfo[f]}`;
 	});
 
-	return `${(`${file.name}@${file.version} - Available scrpts:`)}\n\n    ${x.sort().join('\n    ')}\n`;
+	return `${(`\n${file.name}@${file.version} - Available scrpts:`)}\n\n    ${x.sort().join('\n    ')}\n`;
 };
 
 async function main() {
@@ -29,10 +29,9 @@ async function main() {
 		process.exit(0);
 	} catch (error) {
 		if (error.code === 'ENOENT') {
-			process.stderr.write(`You don't have a package.json in this folder`);
+			process.stderr.write('You don\'t have a package.json in this folder');
 			process.exit(0);
-		}
-		else {
+		} else {
 			throw new Error(error);
 		}
 	}

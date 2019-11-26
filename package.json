@@ -4,8 +4,7 @@
   "description": "List npm scripts from package.json",
   "main": "cli.js",
   "scripts": {
-    "test": "xo",
-    "filipe": "linhares"
+    "test": "xo"
   },
   "bin": {
     "scrpts": "cli.js"
@@ -15,13 +14,18 @@
     "url": "git+https://github.com/filipelinhares/scrpts.git"
   },
   "author": "Filipe Linhares",
+  "contributors": [
+    {
+      "name": "Roque Francisco",
+      "url": "https://github.com/roquef"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/filipelinhares/scrpts/issues"
   },
   "homepage": "https://github.com/filipelinhares/scrpts#readme",
   "xo": {
-    "space": true,
     "envs": [
       "node"
     ]
