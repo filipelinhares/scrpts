@@ -14,18 +14,10 @@ const printScripts = file => {
   }
 
   const x = Object.keys(pkgInfo).map(f => {
-    return (
-      `
-   ${chalk.bold(f)}
-      ${chalk.dim.italic(pkgInfo[f])}`);
+    return `• ${chalk.bold(f)}: ${chalk.dim.italic(pkgInfo[f])}`;
   });
 
-  return (
-    `
-   ${chalk.bold(`${file.name}@${file.version} - Available scrpts:`)}
-
-    ${x.sort().join('\n')}
-`);
+  return `${chalk.bold(`${file.name}@${file.version} - Available scrpts:`)}\n${x.sort().join('\n')}`;
 };
 
 async function main() {
