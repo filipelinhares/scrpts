@@ -1,10 +1,11 @@
 {
   "name": "scrpts",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "List npm scripts from package.json",
   "main": "cli.js",
   "scripts": {
-    "test": "xo"
+    "test": "xo",
+    "filipe": "linhares"
   },
   "bin": {
     "scrpts": "cli.js"
@@ -25,9 +26,7 @@
       "node"
     ]
   },
-  "dependencies": {
-    "chalk": "^2.4.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "xo": "^0.24.0"
   }
