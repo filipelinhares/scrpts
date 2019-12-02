@@ -4,6 +4,7 @@
   "description": "List npm scripts from package.json",
   "main": "cli.js",
   "scripts": {
+    "lint": "standard --fix",
     "test": "standard"
   },
   "bin": {
