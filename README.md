@@ -6,11 +6,17 @@ List npm scripts from `package.json`.
 
 ## Usage
 
+`package.json`
+
 ```
-npx scrpts
+{
+  "scripts": {
+    "help: "npx scrpts"
+  }
+}
 ```
 
-Optionally you can provide a property of package.json as argument:
+Optionally you can provide a property from package.json as argument:
 
 ```
 npx scrpts dependencies # print dependencies
